@@ -1,27 +1,67 @@
-# FrontendEquinorte
+# Frontend Equinorte
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
+Este proyecto corresponde al frontend del sistema Equinorte, desarrollado con Angular 17.  
+Se ha implementado una arquitectura modular basada en componentes reutilizables, con integración de Tailwind CSS y Bootstrap Icons, además de un sistema de navegación mediante Angular Router.
 
-## Development server
+El objetivo principal del proyecto es ofrecer una interfaz clara, escalable y mantenible para la gestión del módulo de facturación y sus procesos asociados, incluyendo consulta de facturas y recalculo de valores.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## Tecnologías utilizadas
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular 17.0.9
+- TypeScript
+- Tailwind CSS
+- Bootstrap Icons
+- Angular Router
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Estructura del proyecto
 
-## Running unit tests
+La estructura principal del proyecto se encuentra en:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Dentro de esta carpeta se organizan los componentes principales del sistema:
 
-## Further help
+### Componentes principales
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- **share/navbar**: Componente de navegación principal de la aplicación.
+- **sidebar**: Menú lateral de navegación con funcionalidad colapsable.
+- **factura-consulta**: Componente encargado de la consulta de facturas.
+- **recalculo-factura**: Componente encargado de mostrar el resultado del recálculo de facturas.
+- **factura-consulta**: Componente encargado de la consulta de facturas.
+
+---
+
+## Arquitectura del proyecto
+
+El proyecto está construido bajo una arquitectura basada en componentes, donde cada funcionalidad se encuentra separada en módulos independientes.
+
+Esto permite:
+
+- Mayor escalabilidad del sistema
+- Reutilización de componentes
+- Mantenimiento más sencillo del código
+- Separación clara de responsabilidades
+
+Se utiliza Angular Router para gestionar la navegación entre vistas, garantizando una experiencia fluida dentro de la aplicación.
+
+---
+
+## Funcionalidades implementadas
+
+- Sidebar colapsable con navegación lateral.
+- Sistema de consulta de facturas.
+- Recalculo de facturas con distribución proporcional de valores.
+- Visualización de resultados del proceso de recalculo.
+- Componentes reutilizables organizados por funcionalidad.
+- Estructura preparada para crecimiento del sistema.
+
+---
+
+## Comandos del proyecto
+
+```bash
+ng serve
