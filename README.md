@@ -80,8 +80,8 @@ src/app
 
 ## Componentes Principales
 
-* **shared/navbar**: Barra de navegación principal de la aplicación.
-* **sidebar**: Menú lateral de navegación con funcionalidad colapsable.
+* **shared/navbar**: Componente de navegación principal de la aplicación.
+* **navbar lateral**: Menú lateral de navegación con funcionalidad colapsable integrado en el sistema de navegación.
 * **factura-consulta**: Consulta y visualización de facturas registradas.
 * **recalculo-factura**: Gestión y visualización del proceso de recálculo de facturas.
 
@@ -97,8 +97,8 @@ La navegación entre vistas es gestionada mediante Angular Router, proporcionand
 
 # Funcionalidades Implementadas
 
-* Sidebar colapsable.
-* Navbar responsivo.
+
+* Navbar responsivo y colapsable.
 * Consulta de facturas.
 * Recálculo de facturas.
 * Visualización de resultados del recálculo.
