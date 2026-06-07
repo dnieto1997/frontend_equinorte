@@ -137,19 +137,7 @@ ng serve
 ng build
 ```
 
-## Ejecutar pruebas
 
-```bash
-ng test
-```
-
-## Generar componentes
-
-```bash
-ng generate component nombre-componente
-```
-
----
 
 # Autor
 
