@@ -1,67 +1,160 @@
 # Frontend Equinorte
 
-Este proyecto corresponde al frontend del sistema Equinorte, desarrollado con Angular 17.  
-Se ha implementado una arquitectura modular basada en componentes reutilizables, con integración de Tailwind CSS y Bootstrap Icons, además de un sistema de navegación mediante Angular Router.
+Este proyecto corresponde al frontend del sistema Equinorte, desarrollado con **Angular 17**.
 
-El objetivo principal del proyecto es ofrecer una interfaz clara, escalable y mantenible para la gestión del módulo de facturación y sus procesos asociados, incluyendo consulta de facturas y recalculo de valores.
+Se implementó una arquitectura modular basada en componentes reutilizables, integrando **Tailwind CSS**, **Bootstrap Icons** y **Angular Router** para proporcionar una interfaz moderna, escalable y fácil de mantener.
 
----
-
-## Tecnologías utilizadas
-
-- Angular 17.0.9
-- TypeScript
-- Tailwind CSS
-- Bootstrap Icons
-- Angular Router
+El objetivo principal es ofrecer una solución para la gestión de facturación, permitiendo la consulta de facturas, el recálculo de valores y la visualización de resultados de manera eficiente.
 
 ---
 
-## Estructura del proyecto
+# Tecnologías Utilizadas
 
-La estructura principal del proyecto se encuentra en:
-
-
-
-Dentro de esta carpeta se organizan los componentes principales del sistema:
-
-### Componentes principales
-
-- **share/navbar**: Componente de navegación principal de la aplicación.
-- **sidebar**: Menú lateral de navegación con funcionalidad colapsable.
-- **factura-consulta**: Componente encargado de la consulta de facturas.
-- **recalculo-factura**: Componente encargado de mostrar el resultado del recálculo de facturas.
-- **factura-consulta**: Componente encargado de la consulta de facturas.
+* Angular 17.0.9
+* TypeScript
+* Tailwind CSS
+* Bootstrap Icons
+* Angular Router
 
 ---
 
-## Arquitectura del proyecto
+# Instalación del Proyecto
 
-El proyecto está construido bajo una arquitectura basada en componentes, donde cada funcionalidad se encuentra separada en módulos independientes.
+## Requisitos
 
-Esto permite:
+* Node.js 18 o superior
+* npm 9 o superior
+* Angular CLI
 
-- Mayor escalabilidad del sistema
-- Reutilización de componentes
-- Mantenimiento más sencillo del código
-- Separación clara de responsabilidades
+## Instalar Dependencias
 
-Se utiliza Angular Router para gestionar la navegación entre vistas, garantizando una experiencia fluida dentro de la aplicación.
+Antes de ejecutar el proyecto, instalar todas las dependencias definidas en el archivo `package.json`:
 
----
+```bash
+npm install
+```
 
-## Funcionalidades implementadas
+o su versión corta:
 
-- Sidebar colapsable con navegación lateral.
-- Sistema de consulta de facturas.
-- Recalculo de facturas con distribución proporcional de valores.
-- Visualización de resultados del proceso de recalculo.
-- Componentes reutilizables organizados por funcionalidad.
-- Estructura preparada para crecimiento del sistema.
+```bash
+npm i
+```
 
 ---
 
-## Comandos del proyecto
+# Configuración del Backend
+
+El frontend consume los servicios REST del backend mediante la configuración definida en:
+
+```text
+src/environments/environment.ts
+```
+
+Ejemplo:
+
+```typescript
+export const environment = {
+  production: false,
+  apiUrl: 'http://localhost:8080/api'
+};
+```
+
+> **Importante:** Ajustar la URL según la configuración del backend. Si el servidor se ejecuta en un puerto diferente, únicamente debe modificarse el host y el puerto. La ruta base de la API debe mantenerse terminando en `/api`.
+
+Ejemplos válidos:
+
+```typescript
+http://localhost:8080/api
+http://localhost:9090/api
+```
+
+---
+
+# Estructura del Proyecto
+
+La estructura principal se encuentra dentro de:
+
+```text
+src/app
+```
+
+## Componentes Principales
+
+* **shared/navbar**: Barra de navegación principal de la aplicación.
+* **sidebar**: Menú lateral de navegación con funcionalidad colapsable.
+* **factura-consulta**: Consulta y visualización de facturas registradas.
+* **recalculo-factura**: Gestión y visualización del proceso de recálculo de facturas.
+
+---
+
+# Arquitectura del Proyecto
+
+El sistema está desarrollado bajo una arquitectura basada en componentes, donde cada funcionalidad se encuentra desacoplada y organizada de forma independiente.
+
+La navegación entre vistas es gestionada mediante Angular Router, proporcionando una experiencia fluida para el usuario.
+
+---
+
+# Funcionalidades Implementadas
+
+* Sidebar colapsable.
+* Navbar responsivo.
+* Consulta de facturas.
+* Recálculo de facturas.
+* Visualización de resultados del recálculo.
+* Consumo de servicios REST mediante HttpClient.
+* Integración con backend Spring Boot.
+
+---
+
+# Ejecución del Proyecto
+
+Iniciar el servidor de desarrollo:
 
 ```bash
 ng serve
+```
+
+Una vez iniciado, la aplicación estará disponible en:
+
+```text
+http://localhost:4200
+```
+
+---
+
+# Comandos Útiles
+
+## Ejecutar proyecto
+
+```bash
+ng serve
+```
+
+## Compilar proyecto
+
+```bash
+ng build
+```
+
+## Ejecutar pruebas
+
+```bash
+ng test
+```
+
+## Generar componentes
+
+```bash
+ng generate component nombre-componente
+```
+
+---
+
+# Autor
+
+Dairo Nieto
+
+Prueba Técnica Equinorte
+
+Frontend desarrollado con Angular 17, Tailwind CSS y Bootstrap Icons.
